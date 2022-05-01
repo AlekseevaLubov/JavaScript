@@ -19,17 +19,27 @@ const StringValid = function (input){
 StringValid(input);
 
 //  3. Минимум 5 символов в строке
-//  4. Максимум 64 символа в строке
-const LenValid = function (input){
-    if (input.length >= 5 && input.length <= 64) {
+const LenMinValid = function (input){
+    if (input.length >= 5) {
        return true
 
     } else {
-        console.log("Error! Please enter between 5 and 64 characters")
+        console.log("Error! Please enter more than 5 characters")
         return false
     } 
 }
-LenValid(input);
+LenMinValid(input);
+//  4. Максимум 64 символа в строке
+const LenMaxValid = function (input){
+    if (input.length <= 64) {
+       return true
+
+    } else {
+        console.log("Error! Please enter less than 64 characters")
+        return false
+    } 
+}
+LenMaxValid(input);
 
 //  5. В строке должны быть буквы
 function LettersValid(input) {
